@@ -12,7 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.Arrays;
+
 import it.ikbo1120.fitness_club_v1_1.R;
+import it.ikbo1120.fitness_club_v1_1.domain.repository.mock.MockBase;
 import it.ikbo1120.fitness_club_v1_1.presentation.viewmodel.HomeViewModel;
 
 public class HomeFragment extends Fragment {
@@ -32,6 +35,8 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+        MockBase mockBase = new MockBase();
+        System.out.println(Arrays.toString(mockBase.getAllServices().toArray()));
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 }
