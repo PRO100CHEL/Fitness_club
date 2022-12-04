@@ -26,4 +26,7 @@ public class MockBase {
         return services;
     }
 
+    public void delete (int position){
+        services.remove(position);
+    }
 }
