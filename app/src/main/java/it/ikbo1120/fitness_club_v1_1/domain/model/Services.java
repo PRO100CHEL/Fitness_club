@@ -5,16 +5,25 @@ public class Services {
     private String name_services;
     private String description_services;
     private Float price_services;
+    private String url;
 
-
-    public Services(Long id_services, String name_services, String description_services, Float price_services) {
+    public Services(Long id_services, String name_services, String description_services, Float price_services, String url) {
         this.id_services = id_services;
         this.name_services = name_services;
         this.description_services = description_services;
         this.price_services = price_services;
+        this.url = url;
     }
 
     public Services() {
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public Long getId_services() {
@@ -39,6 +48,10 @@ public class Services {
 
     public void setDescription_services(String description_services) {
         this.description_services = description_services;
+    }
+
+    public int getIntPrice(){
+        return price_services.intValue();
     }
 
     public Float getPrice_services() {
