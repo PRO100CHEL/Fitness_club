@@ -21,8 +21,7 @@ public class HomeViewModel extends ViewModel {
     }
 
     public HomeViewModel(){
-        allServices = new MutableLiveData<>();
-        MockBase mockBase = new MockBase();
-        allServices.setValue(mockBase.getAllServices());
+        //allServices = new MutableLiveData<>();
+        allServices = MockBase.getItems();
     }
 }
